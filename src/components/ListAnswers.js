@@ -22,6 +22,10 @@ const ListAnswers = ({ quiz, setAnswerData, isDisabled }) => {
   );
 };
 
-ListAnswers.propTypes = {};
+ListAnswers.propTypes = {
+  quiz: PropTypes.object.isRequired,
+  setAnswerData: PropTypes.func.isRequired,
+  isDisabled: PropTypes.bool.isRequired
+};
 
 export default ListAnswers;

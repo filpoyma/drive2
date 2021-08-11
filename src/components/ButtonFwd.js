@@ -1,6 +1,6 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
+import { Button } from 'semantic-ui-react';
 
 const ButtonFwd = ({ onAnswerSelected, isDisabled }) => {
   return (
@@ -14,7 +14,7 @@ const ButtonFwd = ({ onAnswerSelected, isDisabled }) => {
     >
     </Button>
   );
-}
+};
 
 ButtonFwd.propTypes = {
   onAnswerSelected: PropTypes.func.isRequired,

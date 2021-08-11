@@ -73,7 +73,6 @@ class RaccoonsTest extends Component {
   }
 
   render() {
-    console.log('state>>>>', this.state);
     return (
       <Grid>
         <Grid.Row centered columns={2}>

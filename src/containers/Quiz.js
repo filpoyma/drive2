@@ -1,7 +1,6 @@
-import React, { Component, PureComponent } from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Question from '../components/Question';
-import { Grid } from 'semantic-ui-react';
 import ButtonFwd from '../components/ButtonFwd';
 import ListAnswers from '../components/ListAnswers';
 import OpenedAnswer from '../components/OpenedAnswer';
@@ -29,7 +28,6 @@ class Quiz extends Component {
     if (this.state.delay <= 0) {
       clearInterval(this.timerID);
       if (JSON.stringify(prevProps) !== JSON.stringify(this.props)) {
-        console.log(' пропсы не равны', this.props.quiz)
         this.setState({ delay: this.props.quiz.delay || 0 });
         this.timer();
       }
@@ -70,6 +68,9 @@ class Quiz extends Component {
   }
 }
 
-Quiz.propTypes = {};
+Quiz.propTypes = {
+  quiz: PropTypes.object.isRequired,
+  onAnswerSelected: PropTypes.func.isRequired
+};
 
 export default Quiz;
